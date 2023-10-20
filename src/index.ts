@@ -26,7 +26,7 @@ const axiosCaseConverter = (
 			const { data, params } = request;
 
 			const snakecaseKeysOptions: CaseKeysOptions = { deep: true };
-			if (options?.requestConvertExclude)
+			if (options && options.requestConvertExclude)
 				snakecaseKeysOptions.exclude = options.requestConvertExclude;
 
 			if (params)
@@ -52,7 +52,7 @@ const axiosCaseConverter = (
 			if (!data) return response;
 
 			const camelcaseKeysOptions: CaseKeysOptions = { deep: true };
-			if (options?.responseConvertExclude)
+			if (options && options.responseConvertExclude)
 				camelcaseKeysOptions.exclude = options.responseConvertExclude;
 
 			return {
