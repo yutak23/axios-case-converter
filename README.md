@@ -131,19 +131,19 @@ axiosCaseConverter(axios);
 _Optional_  
 Type: `object`
 
-#### requestConvertExclude
+#### requestExcludeKeys
 
 _Optional_  
 Type: `Array<string | RegExp>`
 
-Set what to exclude from case converting at request. Can be set in an array of strings and regular expressions.
+Exclude keys from being snake-cased at request `params` and `data`.
 
-#### responseConvertExclude
+#### responseExcludeKeys
 
 _Optional_  
 Type: `Array<string | RegExp>`
 
-Set what to exclude from case converting at response. Can be set in an array of strings and regular expressions.
+Exclude keys from being camle-cased at response `data`.
 
 ## Note
 

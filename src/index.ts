@@ -8,8 +8,8 @@ export interface InterceptorIds {
 }
 
 export interface Options {
-	requestConvertExclude?: ReadonlyArray<string | RegExp>;
-	responseConvertExclude?: ReadonlyArray<string | RegExp>;
+	requestExcludeKeys?: ReadonlyArray<string | RegExp>;
+	responseExcludeKeys?: ReadonlyArray<string | RegExp>;
 }
 
 interface CaseKeysOptions {
@@ -26,8 +26,8 @@ const axiosCaseConverter = (
 			const { data, params } = request;
 
 			const snakecaseKeysOptions: CaseKeysOptions = { deep: true };
-			if (options && options.requestConvertExclude)
-				snakecaseKeysOptions.exclude = options.requestConvertExclude;
+			if (options && options.requestExcludeKeys)
+				snakecaseKeysOptions.exclude = options.requestExcludeKeys;
 
 			if (params)
 				return {
@@ -52,8 +52,8 @@ const axiosCaseConverter = (
 			if (!data) return response;
 
 			const camelcaseKeysOptions: CaseKeysOptions = { deep: true };
-			if (options && options.responseConvertExclude)
-				camelcaseKeysOptions.exclude = options.responseConvertExclude;
+			if (options && options.responseExcludeKeys)
+				camelcaseKeysOptions.exclude = options.responseExcludeKeys;
 
 			return {
 				...response,
