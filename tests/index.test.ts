@@ -1,6 +1,6 @@
 import { describe, it, expect, expectTypeOf, beforeAll, afterAll } from 'vitest';
 import axios, { AxiosResponse } from 'axios';
-import axiosCaseConverter, { InterceptorIds, Options } from '../index.js';
+import axiosCaseConverter, { InterceptorIds, Options } from '../src/index.js';
 
 describe('Test axiosCaseConverter', () => {
 	describe('AxiosStatic', () => {

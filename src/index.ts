@@ -47,7 +47,7 @@ const axiosCaseConverter = (
 	);
 
 	const responseInterceptorId = axios.interceptors.response.use(
-		(response: AxiosResponse) => {
+		(response: AxiosResponse): AxiosResponse => {
 			const { data } = response;
 			if (!data) return response;
 

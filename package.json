@@ -1,10 +1,10 @@
 {
-	"name": "axios-case-converter",
+	"name": "simple-axios-case-converter",
 	"version": "1.0.0",
 	"author": "yutak23 <yuta.katayama.23+github@gmail.com> (https://github.com/yutak23)",
 	"repository": {
 		"type": "git",
-		"url": "git+ssh://git@github.com:yutak23/axios-case-converter.git"
+		"url": "git+ssh://git@github.com:yutak23/simple-axios-case-converter.git"
 	},
 	"license": "MIT",
 	"type": "module",
@@ -38,8 +38,8 @@
 	},
 	"dependencies": {
 		"axios": "^1.5.1",
-		"camelcase-keys": "^9.1.2",
-		"snakecase-keys": "^5.4.7"
+		"camelcase-keys": "^7.0.2",
+		"snakecase-keys": "^5.5.0"
 	},
 	"devDependencies": {
 		"@tsconfig/node16": "^16.1.1",
