@@ -8,7 +8,7 @@ Axios request/response object key case converts _snake_case/camelCase_.
 
 ## Problem 😕
 
-In many cases, the API's naming convention differs from JavaScript/TypeScript's(ex API is snake_case, JavaScript/TypeScript is camelCase), which means developers need to convert the case of variables and functions.
+In many cases, the API's naming convention differs from JavaScript/TypeScript's(ex API is snake_case, JavaScript/TypeScript is camelCase), which means developers need to convert the case of object key.
 
 ## Solution 😄
 
