@@ -3,12 +3,36 @@ import camelcaseKeys from 'camelcase-keys';
 import snakecaseKeys from 'snakecase-keys';
 
 export interface InterceptorIds {
+	/**
+	 * The interceptor id to eject the case converting of the request.
+	 *
+	 * @example
+	 * ```ts
+	 * axios.interceptors.request.eject(requestInterceptorId);
+	 * ```
+	 */
 	requestInterceptorId: number;
+
+	/**
+	 * The interceptor id to eject the case converting of the response.
+	 *
+	 * @example
+	 * ```ts
+	 * axios.interceptors.response.eject(responseInterceptorId);
+	 * ```
+	 */
 	responseInterceptorId: number;
 }
 
 export interface Options {
+	/**
+	 * Exclude keys from being snake-cased at request `params` and `data`.
+	 */
 	requestExcludeKeys?: ReadonlyArray<string | RegExp>;
+
+	/**
+	 * Exclude keys from being camle-cased at response `data`.
+	 */
 	responseExcludeKeys?: ReadonlyArray<string | RegExp>;
 }
 

@@ -4,15 +4,15 @@
 [![test](https://github.com/yutak23/simple-axios-case-converter/actions/workflows/test.yaml/badge.svg)](https://github.com/yutak23/simple-axios-case-converter/actions/workflows/test.yaml)
 ![style](https://img.shields.io/badge/code%20style-airbnb-ff5a5f.svg)
 
-Axios interceptor that converts _snake_case/camelCase_.
+Axios request/response object key case converts _snake_case/camelCase_.
 
 ## Problem 😕
 
-In many cases, there is a discrepancy between the API's _snake_case_ and JavaScript/TypeScript's _camelCase_, which requires the developer to perform case convert.
+In many cases, the API's naming convention differs from JavaScript/TypeScript's(ex API is snake_case, JavaScript/TypeScript is camelCase), which means developers need to convert the case of variables and functions.
 
 ## Solution 😄
 
-This library eliminates the need for developers to perform troublesome case conversions.
+This library makes it easy for developers to convert case.
 
 Features:
 
@@ -160,7 +160,7 @@ There is a library, `axios-case-converter`, which provides similar functionality
    This library is simpler and safer because it uses the [`interceptor`](https://github.com/axios/axios#interceptors) and does not rewrite the default config.
 
 1. **Easily remove the case conversion feature**  
-    Since `axios-case-converter` overwrites `axios.defaults` (axios default config), if you want to remove `axios-case-converter` functionality, you need to update `axios.defaults` again and will have a hard time.  
+    Since `axios-case-converter` overwrites `axios.defaults` (axios instance default config), if you want to remove `axios-case-converter` functionality, you need to update `axios.defaults` again and will have a hard time.  
     Since this library uses `interceptor`, you can easily disable the functionality of this library by `eject` as follows.
    ```ts
    const { requestInterceptorId, responseInterceptorId } = axiosCaseConverter(axios);
